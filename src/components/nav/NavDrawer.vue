@@ -3,7 +3,7 @@
             v-model="getNavDrawerState"
             fixed
             temporary            
-            class="NavDrawer"
+            class="y-bg-content"
             height="100vh"
             v-click-outside="onClickOutside"
         >
@@ -30,6 +30,7 @@
                         v-for="item in menus"
                         :key="item.name"
                         link
+                        @click="$vuetify.goTo(item.target, options)"
                     >
                         <v-list-item-icon>
                             <v-icon>{{ item.icon }}</v-icon>
@@ -41,36 +42,33 @@
                     </v-list-item>
                 </v-list>
                 <v-divider></v-divider>
-                <v-list>
-                    <v-list-item>
+                <v-list
+                    dense
+                    nav
+                    >
+                    <v-list-item
+                        v-for="el in contact"
+                        :key="el.icon"
+                    >
                         <v-list-item-icon>
-                            <v-icon v-html="'$vuetify.icon.clock'"></v-icon>
+                            <v-icon>{{ el.icon }}</v-icon>
                         </v-list-item-icon>
+                            <v-list-item-title>{{ el.details }}</v-list-item-title>
                         <v-list-item-content>
-                            <v-list-item-title>
-                                +44 73 66 911 226 <br/>
-                                Monday - Friday<br/> 
-                                06:00 - 20:00
-                            </v-list-item-title>
                         </v-list-item-content>
                     </v-list-item>
                 </v-list>
                 <v-divider></v-divider>
-                <v-list>
-                    <v-list-item-content>
-                        <v-list-item-title>
-                            Media:
-                        </v-list-item-title>
-                    </v-list-item-content>
+                <v-list class="py-5">
                     <v-btn 
                         class="mx-3" 
                         fab 
                         dark 
-                        color="teal"
+                        :color="el.bg"
                         v-for="el in media"
                         :key="el.name"
                         >
-                        <v-icon dark>
+                        <v-icon dark :color="el.color">
                             {{ el.icon }}
                         </v-icon>
                     </v-btn>
@@ -90,17 +88,27 @@ export default {
     data() {
         return {
             drawer: null,
+            options: {
+                duration: 700,
+                offset: 50,
+                easing: 'easeOutQuad'
+            },
             menus: [
-                { name: 'Your objective', icon: '$vuetify.icons.objective'},
-                { name: 'Achive your goal', icon: '$vuetify.icons.star'},
-                { name: 'Choose your pack', icon: '$vuetify.icons.boxes'},
-                { name: 'Pricing',  icon: '$vuetify.icons.coins'},
-                { name: 'Contact me',  icon: '$vuetify.icons.phone'}
+                { name: 'Your objective', icon: '$vuetify.icons.objective', target: '#YourObjective' },
+                { name: 'Achive your goal', icon: '$vuetify.icons.star', target: '#AchiveYouGoal' },
+                { name: 'Choose your pack', icon: '$vuetify.icons.boxes', target: '#ChooseYourPack' },
+                { name: 'Pricing',  icon: '$vuetify.icons.coins', target: '#Pricing' },
+                { name: 'Contact me',  icon: '$vuetify.icons.phone', target: '#contactMe' }
             ],
             media: [
-                { name: 'Facebook', icon: '$vuetify.icons.fb'},
-                { name: 'Youtube', icon: '$vuetify.icons.yt'},
-                { name: 'Email', icon: '$vuetify.icons.envelope'}
+                { name: 'Facebook', icon: '$vuetify.icons.fb', color: 'white', bg: '#4267B2' },
+                { name: 'Youtube', icon: '$vuetify.icons.yt', color: 'red', bg: 'white' },
+                { name: 'Email', icon: '$vuetify.icons.envelope', color: 'white', bg: '#2A73C5'}
+            ],
+            contact: [
+                { icon: '$vuetify.icons.mobile', details: '+447366911226' },
+                { icon: '$vuetify.icons.calendar', details: 'Monday - Friday' },
+                { icon: '$vuetify.icons.clock', details: '6:00 - 20:00' },
             ]
         }
     },
@@ -118,8 +126,8 @@ export default {
 }
 </script>
 <style>
-    .NavDrawer {
-        /* z-index: 1200; */
+    .v-navigation-drawer {
+        background-color: #FDD247 !important;
     }
 </style>
 

@@ -31,12 +31,14 @@ const opts = {
       fb: 'fab fa-facebook-f',
       yt: 'fab fa-youtube',
       envelope: 'fas fa-envelope',
-      clock: 'far fa-clock'
+      clock: 'far fa-clock',
+      anchor: 'fas fa-anchor',
+      heart: 'far fa-heart',
+      mobile: 'fas fa-mobile-alt',
+      calendar: 'far fa-calendar-alt'
     }
   }
 }
-
-
 
 Vue.config.productionTip = false
 
