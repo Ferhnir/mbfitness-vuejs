@@ -42,8 +42,8 @@
                             <v-divider
                                     :inset="false"
                                     horizontal
-                                    class="py-5"
-                                ></v-divider>
+                                    class="py-2"
+                            ></v-divider>
                         </div>
                     </v-expand-transition>
                     <v-card-text class="text-center text-uppercase font-weight-bold subtitle-1" color="black">

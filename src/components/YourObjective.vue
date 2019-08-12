@@ -15,7 +15,7 @@
             >
                 <v-card flat class="ma-3 card">
                     <v-responsive class="pt-4 text-center">
-                        <v-btn fab large class="my-4 yel-bg" @click="$vuetify.goTo('#ChooseYouPack', options)">
+                        <v-btn fab large class="my-4 yel-bg" @click="$vuetify.goTo('#ChooseYourPack', options)">
                             <v-icon color="#FDD247">{{ card.icon }}</v-icon>
                         </v-btn>
                     </v-responsive>

@@ -5,9 +5,18 @@
             dark
             class="toolbar"
         >
+            <v-btn height="45" color="#000">
+                <v-img :src="loadDynamicImg('mbfit-logo.jpg')" width="80px" height="45"/>
+            </v-btn>
             <v-spacer></v-spacer>
-            <v-btn text icon color="yellow" @click.stop="updateNavDrawerState">
-                <v-icon v-html="'$vuetify.icons.menu'"></v-icon>
+            <v-btn
+                color="black" 
+                @click.stop="updateNavDrawerState" 
+                class="ma-2"
+                :disabled="!updateNavDrawerState"
+            >
+                MENU
+                <v-icon right class="v-icon-y">$vuetify.icons.menu</v-icon>
             </v-btn>
         </v-app-bar>
         <NavigationDrawer/>
@@ -36,6 +45,9 @@ export default {
         updateNavDrawerState() {
             this.drawer = !this.getNavDrawerState;
             this.setNavDrawerState(this.drawer);
+        },        
+        loadDynamicImg(img) {
+            return require('@/assets/img/' + img);
         }
     },
     computed: {
@@ -48,8 +60,8 @@ export default {
         background-color: inherit;
     }
     .navbar-light-mb,
-    v-icon {
-        color: #EEEE22;
+    .theme--dark.v-btn {
+        color: #EEEE22 !important;
     }
 
     .toolbar {

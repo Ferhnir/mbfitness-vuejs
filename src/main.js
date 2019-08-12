@@ -35,7 +35,8 @@ const opts = {
       anchor: 'fas fa-anchor',
       heart: 'far fa-heart',
       mobile: 'fas fa-mobile-alt',
-      calendar: 'far fa-calendar-alt'
+      calendar: 'far fa-calendar-alt',
+      comments: 'fas fa-comments'
     }
   }
 }

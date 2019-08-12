@@ -1,6 +1,6 @@
 <template>
-    <v-content id="ChooseYourPack" class="b-bg-content">
-        <v-layout class="text-center mt-5">
+    <v-content id="ChooseYourPack" class="b-bg-content pb-5">
+        <v-layout class="text-center mt-5 pb-5">
             <v-flex>
                 <div class="display-2 text-center py-5 yellow-title">
                     DISCOVER THE PACK THAT REPRESENTS YOU!
@@ -13,13 +13,13 @@
             :key="card.icon"
             xs12 sm6 md4 lg4
             >
-                <v-card flat class="ma-3 card">
+                <v-card flat class="ma-3 card b-pack">
                     <v-responsive class="pt-4 text-center">
                         <v-img :src="loadDynamicImg(card.img)" />
                     </v-responsive>
-                    <v-card-text class="text-center text-uppercase font-weight-bold subtitle-1">
+                    <v-card-text class="text-center text-uppercase font-weight-bold subtitle-2">
                         {{ card.title }}
-                        <div class="subtitle-2">
+                        <div class="caption">
                             {{ card.subtitle }}
                         </div>  
                     </v-card-text>
@@ -72,7 +72,7 @@ export default {
             { title: "WE PUSH FOR WORTHY CAUSES", subtitle: "Join our free Fit For a Cause Challenge", img: "package1.jpg" },
             { title: "BEST OF FOUR", subtitle: "Have a look at our Fit 4 Programs", img: "package2.jpg"  },
             { title: "TURN ORDINARY MOM TO SEXY MOM", subtitle: "MOMS FOCUSED PROGRAMS", img: "package3.jpg"  },
-            { title: "EAT THE FOOD YOU LIKE AND LOOSE THE GUT", subtitle: "A COMPLETE NUTRITIONAL COACHING", img: "package4.jpg"  },
+            { title: "EAT YOUR FAVORE AND LOOSE THE GUT", subtitle: "A COMPLETE NUTRITIONAL COACHING", img: "package4.jpg"  },
             { title: "MAKE DAD HANDSOME AGAIN", subtitle: "DAD'S FOCUSED PROGRAMS", img: "package6.jpg"  },
             { title: "BEST OF TWO", subtitle: "TWO FOR ONE TEAM COACHING", img: "package5.jpg"  },
         ],
@@ -115,6 +115,8 @@ export default {
         background-color: #000 !important;
     }
 
+    .b-pack .caption,
+    .b-pack .subtitle-1,
     .b-pack .subtitle-2,
     .b-pack .display-3,
     .b-pack .display-1,

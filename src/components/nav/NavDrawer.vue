@@ -98,6 +98,7 @@ export default {
                 { name: 'Achive your goal', icon: '$vuetify.icons.star', target: '#AchiveYouGoal' },
                 { name: 'Choose your pack', icon: '$vuetify.icons.boxes', target: '#ChooseYourPack' },
                 { name: 'Pricing',  icon: '$vuetify.icons.coins', target: '#Pricing' },
+                { name: 'Testimonials',  icon: '$vuetify.icons.comments', target: '#Testimonials' },
                 { name: 'Contact me',  icon: '$vuetify.icons.phone', target: '#contactMe' }
             ],
             media: [
