@@ -36,12 +36,21 @@ const opts = {
       heart: 'far fa-heart',
       mobile: 'fas fa-mobile-alt',
       calendar: 'far fa-calendar-alt',
-      comments: 'fas fa-comments'
+      comments: 'fas fa-comments',
+      whatsapp: 'fab fa-whatsapp'
     }
   }
 }
 
 Vue.config.productionTip = false
+
+Vue.mixin({
+  methods: {
+    loadImage: (img) => {
+      return require('@/assets/img/' + img);
+    }
+  }
+})
 
 new Vue({
   store,

@@ -61,7 +61,7 @@ export default {
 }
 
 .intro-text {
-    font-size: 80px;
+    font-size: 70px;
     font-stretch: 100%;
     font-weight: bold;
     line-height: 80px;

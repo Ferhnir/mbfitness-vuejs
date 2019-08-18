@@ -6,14 +6,14 @@
             class="toolbar"
         >
             <v-btn height="45" color="#000">
-                <v-img :src="loadDynamicImg('mbfit-logo.jpg')" width="80px" height="45"/>
+                <v-img :src="loadImage('mbfit-logo.jpg')" width="80px" height="45"/>
             </v-btn>
             <v-spacer></v-spacer>
             <v-btn
                 color="black" 
-                @click.stop="updateNavDrawerState" 
+                @click.stop="setNavDrawerState(true)" 
                 class="ma-2"
-                :disabled="!updateNavDrawerState"
+                :disabled="getNavDrawerState"
             >
                 MENU
                 <v-icon right class="v-icon-y">$vuetify.icons.menu</v-icon>
@@ -41,14 +41,7 @@ export default {
         }
     },
     methods: {
-        ...mapActions(['setNavDrawerState']),
-        updateNavDrawerState() {
-            this.drawer = !this.getNavDrawerState;
-            this.setNavDrawerState(this.drawer);
-        },        
-        loadDynamicImg(img) {
-            return require('@/assets/img/' + img);
-        }
+        ...mapActions(['setNavDrawerState'])
     },
     computed: {
         ...mapGetters(['getNavDrawerState']),

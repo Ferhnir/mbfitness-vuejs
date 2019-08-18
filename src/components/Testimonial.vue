@@ -1,7 +1,7 @@
 <template>
-    <v-content id="Testimonials" class="b-bg-content py-5">
+    <v-content id="Testimonials" class="b-bg-content py-5 pb-12">
         <v-divider :inset="false" horizontal color="#FDD247"></v-divider>
-        <v-layout class="text-center mt-5 py-5 b-pack">
+        <v-layout class="text-center mt-5 py-5 pb-12 b-pack">
             <v-flex>
                 <div class="display-3 py-5">
                     Look who has made it
@@ -44,14 +44,19 @@
         </v-layout>
         <v-layout wrap class="card-list text-center mt-5 b-pack">
             <v-flex xs12 sm12 md12 lg12>
-                <v-btn block color="secondary" dark>Read more</v-btn>
+                <TestimonialDialogBox/>
             </v-flex>
         </v-layout>
     </v-content>
 </template>
 <script>
+import TestimonialDialogBox from './testimonials/TestimonialDialogBox.vue'
+
 export default {
     name: "TestimonialPage",
+    components: {
+        TestimonialDialogBox
+    },
     data () {
         return {
             colors: [

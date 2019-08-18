@@ -7,6 +7,8 @@
       <AchiveYourGoals/>
       <ChooseYourPack/>
       <Testimonial/>
+      <CustomizedCoaching/>
+      <ContactMe/>
     </v-content>    
   </v-app>
 </template>
@@ -18,6 +20,8 @@ import YourObjective from './components/YourObjective'
 import AchiveYourGoals from './components/AchiveYourGoals'
 import ChooseYourPack from './components/ChooseYourPack'
 import Testimonial from './components/Testimonial'
+import CustomizedCoaching from './components/CustomizedCoaching'
+import ContactMe from './components/ContactMe'
 
 export default {
   name: 'App',
@@ -27,7 +31,9 @@ export default {
     YourObjective,
     AchiveYourGoals,
     ChooseYourPack,
-    Testimonial
+    Testimonial,
+    CustomizedCoaching,
+    ContactMe
   }
 }
 </script>
