@@ -29,7 +29,7 @@
                             <v-list-item-avatar color="grey darken-3">
                                 <v-img
                                 class="elevation-6"
-                                :src="loadDynamicImg(card.avatar)"
+                                :src="loadImage(card.avatar)"
                                 ></v-img>
                             </v-list-item-avatar>
                     
@@ -67,11 +67,6 @@ export default {
                 { name: "Ekaete", proff: "Rock Climber", avatar: "y10.png", desc: "Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo." },
                 { name: "Stephen Orr", proff: "Car Enthusiast", avatar: "y11.png", desc: "Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."}
             ]
-        }
-    },
-    methods: {
-        loadDynamicImg(img) {
-            return require('@/assets/img/' + img);
         }
     }
 }

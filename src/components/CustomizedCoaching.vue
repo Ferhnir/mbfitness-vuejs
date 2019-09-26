@@ -17,7 +17,7 @@
         <v-layout py-5>
             <v-flex>
                 <v-layout column align-center>
-                    <v-btn large dark color="pink">
+                    <v-btn large dark color="pink" @click="setContactDialogState(true)">
                         Get your qutoe today!
                     </v-btn>
                 </v-layout>
@@ -26,6 +26,7 @@
     </v-content>
 </template>
 <script>
+
 export default {
     name: "CustomizedCoaching"
 }

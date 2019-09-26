@@ -9,6 +9,7 @@
       <Testimonial/>
       <CustomizedCoaching/>
       <ContactMe/>
+      <FiveWeekQuestionare/>
     </v-content>    
   </v-app>
 </template>
@@ -22,6 +23,7 @@ import ChooseYourPack from './components/ChooseYourPack'
 import Testimonial from './components/Testimonial'
 import CustomizedCoaching from './components/CustomizedCoaching'
 import ContactMe from './components/ContactMe'
+import FiveWeekQuestionare from './components/forms/FiveWeekQuestionare'
 
 export default {
   name: 'App',
@@ -33,7 +35,8 @@ export default {
     ChooseYourPack,
     Testimonial,
     CustomizedCoaching,
-    ContactMe
+    ContactMe,
+    FiveWeekQuestionare
   }
 }
 </script>
@@ -48,6 +51,10 @@ export default {
 
     .y-bg-content {
         background-color: #FDD247;
+    }
+
+    .w-bg-content {
+      background-color: #FFF !important;
     }
 
     .py-200 {

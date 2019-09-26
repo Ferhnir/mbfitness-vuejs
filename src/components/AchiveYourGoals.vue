@@ -69,11 +69,6 @@ export default {
             { title: "CREATE A PLAN TO REACH YOUR GOALS", description: "", active: false  },
             { title: "WORK THE PLAN UNTIL YOU REACH YOUR GOAL", description: "", active: false  }
         ],
-    }),
+    })
 }
 </script>
-<style>
-    .achive-goals-content {
-        background-color: #FDD247;
-    }
-</style>

@@ -2,7 +2,7 @@
     <v-content>       
         <v-parallax 
             dark
-            :src="loadDynamicImg('coach-img.jpg')"
+            :src="loadImage('coach-img.jpg')"
             class="parallax"
         >
             <v-layout
@@ -23,6 +23,8 @@
                     color="#FDD247" 
                     dark
                     style="color: black;"
+                    class="claim-btn-intro"
+                    @click="setContactDialogState(true)"
                 >
                     CLAIM YOUR YOUR FREE 5 DAY CLARITY CONSULT
                 </v-btn>
@@ -32,12 +34,7 @@
 </template>
 <script>
 export default {
-    name: "IntroPage",
-    methods: {
-        loadDynamicImg(img) {
-            return require('@/assets/img/' + img);
-        }
-    }
+    name: "IntroPage"
 }
 </script>
 <style>
@@ -67,6 +64,12 @@ export default {
     line-height: 80px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 430px) {
+    .claim-btn-intro {
+        font-size: 10px !important;
+    }
 }
 </style>
 

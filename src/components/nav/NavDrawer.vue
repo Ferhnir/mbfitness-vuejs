@@ -1,6 +1,6 @@
 <template>
         <v-navigation-drawer
-            v-model="getNavDrawerState"
+            :value="getNavDrawerState"
             fixed
             temporary            
             class="y-bg-content"
@@ -77,7 +77,7 @@
         </v-navigation-drawer>
 </template>
 <script>
-import { mapGetters, mapActions } from 'vuex';
+import { mapGetters, mapActions } from 'vuex'
 import vClickOutside from 'v-click-outside'
 
 export default {
@@ -116,19 +116,20 @@ export default {
     methods: {
         ...mapActions(['setNavDrawerState']),
         onClickOutside () {
-            if(this.getNavDrawerState == true) {
-                this.setNavDrawerState(false);
-            }
+            this.getNavDrawerState ? this.setNavDrawerState(false) : ''
         }
     },
     computed: {
-        ...mapGetters(['getNavDrawerState'])
+        ...mapGetters(['getNavDrawerState']),
+        drawerState() {
+            return this.getNavDrawerState;
+        }
     }
 }
 </script>
 <style>
     .v-navigation-drawer {
-        background-color: #FDD247 !important;
+        background-color: #FFFF !important;
     }
 </style>
 

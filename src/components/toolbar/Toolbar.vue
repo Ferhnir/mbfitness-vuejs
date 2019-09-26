@@ -32,14 +32,6 @@ export default {
     components: {
         NavigationDrawer
     },
-    data() {
-        return {
-            items: [
-                'All', 'Family', 'Friends', 'Coworkers'
-            ],
-            drawer: false
-        }
-    },
     methods: {
         ...mapActions(['setNavDrawerState'])
     },

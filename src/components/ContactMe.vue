@@ -48,7 +48,7 @@
 <script>
 
 import GoogleMap from './map/GoogleMap'
-import { mapGetters, mapActions } from 'vuex';
+import { mapActions } from 'vuex';
 
 export default {
     name: "ContactMe",

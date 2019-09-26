@@ -16,6 +16,11 @@ import 'vuetify/dist/vuetify.min.css'
 import '@fortawesome/fontawesome-free/css/all.css' // Ensure you are using css-loader
 import 'roboto-fontface/css/roboto/roboto-fontface.css'
 
+//Vue-Lodash
+import VueLodash from 'vue-lodash'
+const options = { name: 'lodash' }
+Vue.use(VueLodash, options)
+
 Vue.use(Vuetify)
 
 const opts = {
@@ -37,15 +42,26 @@ const opts = {
       mobile: 'fas fa-mobile-alt',
       calendar: 'far fa-calendar-alt',
       comments: 'fas fa-comments',
-      whatsapp: 'fab fa-whatsapp'
+      whatsapp: 'fab fa-whatsapp',
+      check: 'fas fa-check-circle',
+      question: 'fas-fa-question-circle',
+      next: 'fas fa-arrow-right',
+      prev: 'fas fa-arrow-left',
+      edit: 'fas fa-pen-square'
     }
   }
 }
 
 Vue.config.productionTip = false
 
+
+import { mapActions } from 'vuex';
+
 Vue.mixin({
   methods: {
+    ...mapActions([
+      'setContactDialogState'
+    ]),
     loadImage: (img) => {
       return require('@/assets/img/' + img);
     }
