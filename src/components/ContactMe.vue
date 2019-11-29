@@ -61,7 +61,6 @@ export default {
             buttons: [
                 { title: "Call", icon: "$vuetify.icons.phone", target: "tel:+447366911226" },
                 { title: "WhatsApp", icon: "$vuetify.icons.whatsapp", target: "whatsapp://call?number=+447366911226" },
-                { title: "E-mail me", icon: "$vuetify.icons.envelope", target: "" },
                 { title: "", icon: "$vuetify.icons.fb", target: "" }
             ]
         }
